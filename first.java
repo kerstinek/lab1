@@ -21,10 +21,22 @@ public class first
 	public static void main(String[] args) {
  		Scanner klawiatura = new Scanner(System.in);
 		System.out.println("Podaj min: ");
-        	int min = klawiatura.nextInt();	
+   		 while (!klawiatura.hasNextInt()) {
+       			 System.out.println("To nie byla liczba, podaj jeszcze raz");
+       			 klawiatura.next();
+   		}
+		int min = klawiatura.nextInt();	
 		System.out.println("Podaj max: ");
+   		 while (!klawiatura.hasNextInt()) {
+       			 System.out.println("To nie byla liczba, podaj jeszcze raz");
+       			 klawiatura.next();
+   		}
 		int max = klawiatura.nextInt();	
 		System.out.println("Podaj ilosc powtorzen: ");
+   		 while (!klawiatura.hasNextInt()) {
+       			 System.out.println("To nie byla liczba, podaj jeszcze raz");
+       			 klawiatura.next();
+   		}
 		int count = klawiatura.nextInt();	
 		System.out.print("Odpowiedz: ");
 		go( min, max, count);
